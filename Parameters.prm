@@ -1,0 +1,119 @@
+
+#PARAMETERS 
+
+subsection General
+ # The name of the output file to be generated
+	set Output file name                              = Output
+
+ # The polynomial degree of the FE
+        set Poly degree                                   = 2 
+
+ # The number of mesh global refinements
+        set Number global refinements                     = 3 
+
+ # Grid scale
+        set Grid scale                                    = 1.0 
+
+ # Initial radius [mm]
+        set Initial radius                                = 2 
+
+ # Initial cortex thickness as a ratio to initial radius (value between 0 and 1)
+        set Cortex thickness                              = 0.1 
+ 
+ # Ventricular zone raduis as a ratio to initial radius (value between 0.2 and 0.6)
+        set Ventricular zone raduis                       = 0.25 
+
+ # Subventricular zone raduis as a ratio to initial radius (value between ventricular zone raduis and 0.6)
+        set Subventricular zone raduis                    = 0.4 
+
+ # Mitotic somal translocation factor (value <= 0.1)
+        set Mitotic somal translocation factor            = 0.02 
+
+ # Damention ratio
+        set Damention ratio                               = 1.2
+	
+ # Total time
+        set Total time                                    = 1000 
+
+ # Time step size
+        set Time step size                                = 0.1 
+
+ # Multiplier max iterations linear solver
+        set Multiplier max iterations linear solver       = 100 
+
+ # Max number newton iterations
+        set Max number newton iterations                  = 8 
+
+ # The tolerance wrt the normalised residual deformation
+        set Tolerance residual deformation                =1e-8 
+
+ # The tolerance wrt the normalised residual diffusion
+        set Tolerance residual diffusion                  = 1e-8 
+
+ # The tolerance wrt the normalised residual norm
+        set Tolerance update                              = 0.0001 
+
+# The state of the stiffness Constant or Varying
+        set The state of the stiffness                   = Varying 
+
+ # The value of the Poisson's ratio
+        set Poisson's ratio                              = 0.38 
+
+ # The shear modulus of conrtex layer [KPa]
+        set The shear modulus of conrtex                 = 2.07 
+
+ # The ratio of stiffness between cortex and subcortex  mu_cmax/mu_smax
+        set The ratio of stiffness                       = 3 
+
+ # The max cell density where the stiffness still constant c_max
+        set The max cell density                         = 700 
+ 
+ # Growth rate
+        set Growth rate                                   = 0.00047 
+ 
+ # Growth exponent alpha
+        set Growth exponent                               = 1.65 
+
+ # Growth ratio
+        set  Growth ratio                                 = 1.5 
+
+ # Cell dvision rate in ventricular zone G^c_v [1/(mm^2 wk)]
+        set Cell dvision rate of RGCs                    = 60 
+
+ # Cell dvision rate in outer-subventricular zone G^c_ovz [1/(mm^2 wk)]
+        set Cell dvision rate of Outer RGCs              = 10 
+
+# Constant, Linear-gradient, Quadratic-gradient ,Random1, Random2, Random3
+        set The OSVZ regional variation     		 = Quadratic-gradient
+
+ # Cell dvision intial value [1/(mm^2)]
+        set Cell dvision intial value                    = 0 
+
+ # Cell migration speed  [mm/wk] 
+        set Cell migration speed                         = 5 
+
+ # Diffusivity  d^cc [mm^2/wk]
+        set Diffusivity                                  = 0.11 
+   
+ # Cell migration threshold  c_0 [1/mm^3]
+        set Cell migration threshold                     = 500 
+
+ # Heaviside function exponent  gamma
+        set Heaviside function exponent                  = 0.008 
+  
+ # Linear solver type (CG or Direct)
+        set Linear solver type                            = Direct 
+
+ # Stabilization constant Betta
+        set Stabilization constant                        = 0.0335 
+
+ # c_k factor (CFL condition)
+        set c_k factor                                   = 0.33334 
+
+end
+
+#PARAMETERS - END
+
+
+
+
