@@ -20,7 +20,8 @@ To install cmake you might need to install [Homebrew](https://brew.sh/) first. O
 ````
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-After that you could install cmake by typing the follwing command 
+````
 
+After that you could install cmake by typing the follwing command 
 ````
 brew install cmake 
