@@ -26,4 +26,4 @@ After that, you could install cmake by typing the following command
 brew install cmake 
 ````
 
-You can test that cmake running using the following command ``` cmake --version ```. The answering message should be like ```cmake version 3.24.1```. Otherwise, the xcode is not installed. 
+You can test that cmake running using the following command ``` cmake --version ```. The answering message should be like ```cmake version 3.24.1```. Otherwise, the cmake is not installed. 
