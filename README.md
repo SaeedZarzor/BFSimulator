@@ -11,4 +11,4 @@ First, install xcode from the app store. After that, you might need to install t
 xcode-select --install
 ```
 
-You can test that xcode running using the following command ``` xcode-select --version 
+You can test that xcode running using the following command ``` xcode-select --version ```. The answering message should be like ```xcode-select version 2396.```. Otherwise, the xcode is not installed.
