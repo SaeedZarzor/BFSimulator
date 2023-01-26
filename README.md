@@ -1,1 +1,3 @@
 # BFSimulator
+
+## System requirements
