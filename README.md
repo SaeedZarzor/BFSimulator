@@ -74,3 +74,9 @@ export OMPI_FC=gfortran-11;export OMPI_CC=clang;export OMPI_CXX=clang++
 ````
 
 If you have trouble installing deal.II please see either [here](https://github.com/dealii/candi) or [here](https://github.com/dealii/dealii/wiki/MacOSX).
+
+P.s. we recommended installing deal.II version 9.4. Otherwise, you could have trouble with later or older versions.
+
+* **Paraview**
+
+Last, you need to download [Paraview](https://www.paraview.org/) and then copy it to the Applications folder.
