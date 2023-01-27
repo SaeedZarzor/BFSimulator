@@ -41,3 +41,5 @@ Again, we will use Homebrew to install Python3. Open termainl and use the comman
 ````
 brew install python@3.10
 ````
+
+To check the installation success use the command ```which Python3```. The answering message should be like ```/opt/homebrew/bin/Python3```
