@@ -80,3 +80,6 @@ P.s. we recommended installing deal.II version 9.4. Otherwise, you could have tr
 * **Paraview**
 
 Last, you need to download [Paraview](https://www.paraview.org/) and then copy it to the Applications folder.
+
+## Configuration
+
