@@ -5,7 +5,7 @@ This version of the code works on the macOS powered by either intel or apple sil
 
 * **xcode**
 
-First, install xcode from the app store. After that, you might need to install the command line tools. To do so you might be to open the Terminal and run the following command
+First, install xcode from the app store. After that, you might need to install the command line tools. To do so you might be to open the terminal and run the following command
 
 ```
 xcode-select --install
@@ -15,7 +15,7 @@ You can test that xcode running using the following command ``` xcode-select --v
 
 * **cmake**
 
-To install cmake you might need to install [Homebrew](https://brew.sh/) first. Open a native termainl and run the following command 
+To install cmake you might need to install [Homebrew](https://brew.sh/) first. Open a native terminal and run the following command 
 
 ````
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -36,7 +36,7 @@ brew install cmake open-mpi gcc@11
 
 * **Python3**
 
-Again, we will use Homebrew to install Python3. Open termainl and use the command 
+Again, we will use Homebrew to install Python3. Open terminal and use the command 
 
 ````
 brew install python@3.10
@@ -52,5 +52,24 @@ brew install python-tk@3.10
 
 Then, you might need to install PIP to easily install and use Python3 packages. First, check if the PIP already installed ``` pip --version```, if not, follow the instructions [here](https://www.groovypost.com/howto/install-pip-on-a-mac/#:~:text=To%20install%20PIP%20using%20ensurepip,instructions%20to%20complete%20this%20process.).
 
-* **deal.II **
+* **deal.II**
+
+The next step is to install and setup deal.II library. You can do so by following the following steps:
+
+1. open terminal and write ```clang``` to trigger the installation of the command line tools. 
+2. download the deal.II library using the terminal command,
+````
+git clone https://github.com/dealii/candi.git
+````
+3. navigate the terminal to the downloads folder ```cd candi```.
+
+4. run the command
+````
+export OMPI_FC=gfortran-11;export OMPI_CC=clang;export OMPI_CXX=clang++
+````
+5. install deal.II by runing the command
+
+````
+ ./candi.sh --packages="dealii"
+````
 
