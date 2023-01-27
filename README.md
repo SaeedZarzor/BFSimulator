@@ -1,5 +1,9 @@
 # BFSimulator
 
+Basically, the project includes two parts. The core part is built on C++ language and deal.II libraries to do the simulation and generate the results. The second part is built on Python3 which provides a modern and friendly user interface with the possibility to present the results nicely.
+
+![Alt](BFSimulator/Images/example.png)
+
 ## Setup and installation
 This version of the code works on the macOS powered by either intel or apple silicon. The following packages/libraries are required to install before running the code.
 
@@ -72,10 +76,11 @@ export OMPI_FC=gfortran-11;export OMPI_CC=clang;export OMPI_CXX=clang++
 ````
  ./candi.sh --packages="dealii"
 ````
+6. Follow the instructions on the screen (you can abort the process by pressing < CTRL > + C)
 
 If you have trouble installing deal.II please see either [here](https://github.com/dealii/candi) or [here](https://github.com/dealii/dealii/wiki/MacOSX).
 
-P.s. we recommended installing deal.II version 9.4. Otherwise, you could have trouble with later or older versions.
+Note: we recommended installing deal.II version 9.4. Otherwise, you could have trouble with later or older versions.
 
 * **Paraview**
 
@@ -92,3 +97,5 @@ Now use ```cd BFSimulator ```to enter the folder. Then you need to install all n
 ````
 pip install -r requirements.txt
 ````
+## Configuration without Python3
+
