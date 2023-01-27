@@ -1,11 +1,15 @@
 # BFSimulator
 
-Basically, the project includes two parts. The core part is built on C++ language and deal.II libraries to do the simulation and generate the results. The second part is built on Python3 which provides a modern and friendly user interface with the possibility to present the results nicely.
+The project includes two parts. The core part is built on C++ language and deal.II libraries to do the simulation and generate the results. The second part is built on Python3 which provides a modern and friendly user interface with the possibility to present the results nicely.
 
 ![Alt](/Images/example.png)
 
+**Place note:** The current project version builds to work on the macOS powered by either intel or apple silicon. In case you would like to run it on other platforms(Linux or Windows), see the other project branches.
+
+In the following, we explain the setup, installation, and configuration of the project step by step. If you do not want to run the second part of the project (interface), place jump to the "configuration without Python3".
+
 ## Setup and installation
-This version of the code works on the macOS powered by either intel or apple silicon. The following packages/libraries are required to install before running the code.
+The following packages/libraries are required to install before running the project.
 
 * **xcode**
 
