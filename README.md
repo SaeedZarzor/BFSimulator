@@ -54,7 +54,7 @@ Then, you might need to install PIP to easily install and use Python3 packages. 
 
 * **deal.II**
 
-The next step is to install and setup deal.II library. You can do so by following the following steps:
+The next step is to install and setup [deal.II](https://www.dealii.org/) library. You can do so by following the steps:
 
 1. open terminal and write ```clang``` to trigger the installation of the command line tools. 
 2. download the deal.II library using the terminal command,
@@ -73,3 +73,4 @@ export OMPI_FC=gfortran-11;export OMPI_CC=clang;export OMPI_CXX=clang++
  ./candi.sh --packages="dealii"
 ````
 
+If you have trouble installing deal.II please see either [here](https://github.com/dealii/candi) or [here](https://github.com/dealii/dealii/wiki/MacOSX).
