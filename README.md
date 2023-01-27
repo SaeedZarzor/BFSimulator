@@ -2,7 +2,7 @@
 
 Basically, the project includes two parts. The core part is built on C++ language and deal.II libraries to do the simulation and generate the results. The second part is built on Python3 which provides a modern and friendly user interface with the possibility to present the results nicely.
 
-![Alt](BFSimulator/Images/example.png)
+![Alt](/BFSimulator/Images/example.png)
 
 ## Setup and installation
 This version of the code works on the macOS powered by either intel or apple silicon. The following packages/libraries are required to install before running the code.
