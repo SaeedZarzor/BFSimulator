@@ -88,3 +88,7 @@ The following step is to configure the BFSimulator project, but first, we should
 git clone https://github.com/SaeedZarzor/BFSimulator.git
 ````
 
+Now use ```cd BFSimulator ```to enter the folder. Then you need to install all necessary Python3 packages to run the project using the command
+````
+pip install -r requirements.txt
+````
