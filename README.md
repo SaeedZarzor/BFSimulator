@@ -43,3 +43,8 @@ brew install python@3.10
 ````
 
 To check the installation success use the command ```which Python3```. The answering message should be like ```/opt/homebrew/bin/Python3```
+
+After that, you might need to setup Tkinter package.  
+
+````
+brew install python-tk@3.10
