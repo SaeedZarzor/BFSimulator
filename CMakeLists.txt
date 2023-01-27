@@ -23,7 +23,7 @@ SET(TARGET_SRC
 
 # Usually, you will not need to modify anything beyond this point...
 
-CMAKE_MINIMUM_REQUIRED(VERSION 3.24.1)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.25.2)
 
 
 FIND_PACKAGE(deal.II 9.4 QUIET

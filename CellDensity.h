@@ -94,19 +94,22 @@ class CellDensity
   double compute_denisty_source_ORGC(const Point<dim> &p, const double time, const double s)
     {
       double alpha = std::abs(std::atan(p[1]/p[0]));
-      double sin;
+      double sin=1.0;
       if (OSVZ_varying == "Constant")
           sin = 1;
+      
       else if (OSVZ_varying == "Linear-gradient" )
           sin = std::sin(alpha);
+      
       else if (OSVZ_varying =="Quadratic-gradient")
           sin = std::pow(alpha,2);
+      
       else if (OSVZ_varying == "Random1" )
           sin = std::sin(10*alpha) * (alpha);
+      
       else if (OSVZ_varying == "Random2")
           sin = (std::sin(20*alpha) * std::log(1/alpha)) - (std::sin(10*alpha) *std::abs(alpha));
-      else if (OSVZ_varying == "Random3")
-          sin = std::cos(10*alpha) * std::sqrt(alpha);
+      
       else
           ExcMessage("'The OSVZ regional variation' Entery unknown ");
 
