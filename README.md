@@ -83,6 +83,8 @@ Last, you need to download [Paraview](https://www.paraview.org/) and then copy i
 
 ## Configuration
 
-The following step is to configure the BFSimulator project, but first, we should download it. After navigating the terminal to your to where you want to download the project you could run the command
+The following step is to configure the BFSimulator project, but first, we should download it. After navigating the terminal to where you want to download the project, you shall run the command
 ````
 git clone https://github.com/SaeedZarzor/BFSimulator.git
+````
+
