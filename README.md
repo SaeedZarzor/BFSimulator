@@ -50,5 +50,5 @@ After that, you might need to setup Tkinter package.
 brew install python-tk@3.10
 ````
 
-Then, you might need to install PIP to easily install and use Python3 packages. First, check if the PIP already installed ``` pip --version```, if not, follow the instructions [here](https://www.groovypost.com/howto/install-pip-on-a-mac/#:~:text=To%20install%20PIP%20using%20ensurepip,instructions%20to%20complete%20this%20process.)
+Then, you might need to install PIP to easily install and use Python3 packages. First, check if the PIP already installed ``` pip --version```, if not, follow the instructions [here](https://www.groovypost.com/howto/install-pip-on-a-mac/#:~:text=To%20install%20PIP%20using%20ensurepip,instructions%20to%20complete%20this%20process.).
 
