@@ -1,5 +1,6 @@
 #!/opt/homebrew/bin/Python3
-
+# change the directory above #
+######################################
 
 import subprocess
 import fileinput

@@ -1,5 +1,6 @@
 #!/opt/homebrew/bin/Python3
-
+# change the directory above #
+######################################
 
 from tkinter import  messagebox
 from tkinter import filedialog
