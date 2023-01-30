@@ -1,3 +1,5 @@
+#!/opt/homebrew/bin/Python3
+
 import subprocess
 import fileinput
 import sys
@@ -259,7 +261,7 @@ def close_fun():
 def save_fun(in_root):
     if in_root:
         root.destroy()
-    subprocess.run(['Python3', 'save.py'])
+    subprocess.run(['./save.py'])
     sys.exit()
 
 # =============================================================================================
@@ -282,12 +284,12 @@ if not exists(cmake_file):
 if not exists(make_file):
     subprocess.run(['make'])
     
-progress = subprocess.Popen('./progress.app/Contents/MacOS/progress')
+progress = subprocess.Popen('./progress.py')
 subprocess.run(['./Brain_growth', 'Parameters.prm',  sys.argv[1]])
 
-for process in psutil.process_iter():
-    if (process.name() == "progress"):
-        os.system("kill /im "+str(process.pid))
+#for process in psutil.process_iter():
+#    if re.match("progress", process.name()):
+#        os.system("kill /im "+str(process.pid))’
 
 directory_folder = "Folder_Output"
 parent_dir_folder = os.getcwd()

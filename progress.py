@@ -1,3 +1,5 @@
+#!/opt/homebrew/bin/Python3
+
 import subprocess
 import fileinput
 import sys

@@ -1,3 +1,6 @@
+#!/opt/homebrew/bin/Python3
+
+
 from tkinter import  messagebox
 from tkinter import filedialog
 import shutil

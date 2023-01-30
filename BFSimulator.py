@@ -1,3 +1,6 @@
+#!/opt/homebrew/bin/Python3
+
+
 import subprocess
 import fileinput
 import sys
@@ -381,7 +384,7 @@ def update_parameters():
             
         sys.stdout.write(line)
 
-    make_run = subprocess.Popen(['Python3', 'make_run.py', def_case.get()])
+    make_run = subprocess.Popen(['./make_run.py', def_case.get()])
     root.destroy()
     
 #=============================== set_default_values function ================================================================
