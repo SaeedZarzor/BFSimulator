@@ -117,4 +117,28 @@ To run the Project use the command
 ./BFSimulator.py 
 ````
 ## Configuration without Python3
+In this section, we explain how to run the first part of the project, i.e. the simulation part, independently. If you have already implemented all previous steps and everything works well, you do not need to do anything here. In case you have some trouble with python, you might need to go ahead with this section.
+
+First, you might need to install xcode with command line tools, cmake, compiler and MPI, and deal.II (see above). And also, it is recommended to install Paraview to present the results. 
+
+After installation did successfully. You would download the Project by using the terminal command
+
+````
+git clone https://github.com/SaeedZarzor/BFSimulator.git
+````
+
+Now use ```cd BFSimulator ```to enter the folder. And write the command
+
+````
+cmake CMakeLists.txt
+````
+
+After cmake generates MakeFile successfully, run the ``` make ``` command.
+
+To start the simulation use the command 
+
+`````
+After cmake generates MakeFile successfully, run the ``` make ``` command.
+
+
 
