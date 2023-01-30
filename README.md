@@ -101,5 +101,11 @@ Now use ```cd BFSimulator ```to enter the folder. Then you need to install all n
 ````
 pip install -r requirements.txt
 ````
+
+To run the Project use the command
+
+````
+Python3 BFSimulator.py 
+````
 ## Configuration without Python3
 
