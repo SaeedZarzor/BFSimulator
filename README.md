@@ -138,7 +138,7 @@ After cmake generates MakeFile successfully, run the ``` make ``` command.
 To start the simulation use the command 
 
 `````
-After cmake generates MakeFile successfully, run the ``` make ``` command.
+./Brain_growth Parameters.prm 2 
+`````
 
-
-
+If you would to simulate a 3D case replace 2 with 3. To change simulation parameters open the ``` Parameters.prm ``` file and change them from there.
