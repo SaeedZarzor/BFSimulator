@@ -102,10 +102,19 @@ Now use ```cd BFSimulator ```to enter the folder. Then you need to install all n
 pip install -r requirements.txt
 ````
 
-To run the Project use the command
-
+After that, we want to make the python files executable. In the terminal window wrtie the command ```which python3``` you should get the path to the python3 installed on your machine. Copy the getting path and open ```BFSimulator.py ```, then paste the path on the first line after ```#!```.
+In the terminal use the command ```ls -lh BFSimulator.py```to know the files´s permission. If the response was like this 
 ````
-Python3 BFSimulator.py 
+-rwx------@ 1 saeed  staff    68K Jan 30 10:18 BFSimulator.py
+````
+that means the file is already considered executable. Otherwise, run the command ``` chmod 700  BFSimulator.py``` to change the file´s permission.
+
+Repeat the previous step again for the files: ``` save.py```, ```make_run.py ```, ```progress.py```
+
+
+To run the Project use the command
+````
+./BFSimulator.py 
 ````
 ## Configuration without Python3
 
