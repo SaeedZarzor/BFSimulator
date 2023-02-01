@@ -19,9 +19,8 @@ class NeoHookeanMaterial
 {
     public:
 				
-        NeoHookeanMaterial(const double shear_modulud_cortex, const double Poisson, const double stiffness_ratio, const std::string stiffness_case ,const double max_cell_density, const double subcortix_raduis):
-        mu_cmax(shear_modulud_cortex), mu_s(shear_modulud_cortex/stiffness_ratio)
-       ,nu(Poisson), st_case(stiffness_case) ,c_max(max_cell_density), R_c(subcortix_raduis),
+        NeoHookeanMaterial(const std::string stiffness_case, const double shear_modulud_cortex, const double Poisson, const double stiffness_ratio ,const double max_cell_density, const double subcortix_raduis):
+      st_case(stiffness_case), mu_cmax(shear_modulud_cortex), mu_s(shear_modulud_cortex/stiffness_ratio), nu(Poisson) ,c_max(max_cell_density), R_c(subcortix_raduis),
         F_e( Physics::Elasticity::StandardTensors< dim >::I), J_e(1.0)
         {}
         

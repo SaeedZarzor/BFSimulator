@@ -2985,6 +2985,8 @@ int main (int argc, char* argv[])
   using namespace dealii;
   using namespace Brain_growth;
 
+    Assert(argc<3, ExcMessage("This project needs two arguments as input, the first is the name of the parameters file, and the second is the geometry dimensionality of problem 2 or 3."));
+
   try
     {
        int dim = strtol(argv[2],NULL, 10);

@@ -51,10 +51,10 @@ public:
           double r_osvz = 0.662*parameter.initial_radius;
 	      
 
-	      material = new NeoHookeanMaterial<dim>(parameter.shear_modulud_cortex, parameter.Poisson, parameter.stiffness_ratio, parameter.stiffness_case ,parameter.max_cell_density, R_c);
+	      material = new NeoHookeanMaterial<dim>(parameter.stiffness_case, parameter.shear_modulud_cortex, parameter.Poisson, parameter.stiffness_ratio ,parameter.max_cell_density, R_c);
 
 	      growth = new Growth<dim>(parameter.growth_rate, parameter.growth_ratio, parameter.growth_exponent,
-                  parameter.cell_migration_threshold, parameter.damention_ratio, R_c);
+                  parameter.cell_migration_threshold,  parameter.damention_ratio, R_c);
 
               density = new CellDensity<dim>(parameter.cell_dvision_rate_v, parameter.cell_dvision_rate_ovz ,parameter.cell_migration_speed,parameter.diffusivity, parameter.cell_migration_threshold, parameter.exponent, parameter.damention_ratio,
                   r_v,R_c, r_ivz,r_osvz, parameter.MST_factor, parameter.OSVZ_divion_distr);
