@@ -1,7 +1,6 @@
  /* ---------------------------------------------------------------------
  *
- * Copyright (C) 2010 - 2015 by the deal.II authors and
- *                              & Jean-Paul Pelteret and Andrew McBride
+ * Copyright (C) 2019 - 2023 by the deal.II authors and Mohammad Saeed Zarzor
  *
  * This file is part of the deal.II library.
  *
@@ -15,8 +14,7 @@
  * ---------------------------------------------------------------------
 
  *
- * Authors: Jean-Paul Pelteret, University of Cape Town,
- *          Andrew McBride, University of Erlangen-Nuremberg, 2010
+ * Authors: Mohammad Saeed Zarzor , University of Erlangen-Nuremberg, 2023
  */
 
 
