@@ -1078,14 +1078,14 @@ outer_ridial_rate.place(relx=0.6, rely=0.28)
 outer_ridial_rate.bind('<FocusIn>', outer_ridial_rate_info)
 outer_ridial_rate.bind('<FocusOut>', info_dis)
 
-label_ORG_variation = customtkinter.CTkLabel(master=frame_diffusion, text="The OSVZ regional variation:", font=("Roboto", 16)).place(relx=0.05, rely=0.38)
+label_ORG_variation = customtkinter.CTkLabel(master=frame_diffusion, text="Distribution of OSVZ proliferation:", font=("Roboto", 16)).place(relx=0.05, rely=0.38)
 
 ORG_variation_case = ttk.Combobox(frame_diffusion , textvariable=def_ORG_variation_case ,values = OSVZ_varying_options, width = 11, state='readonly')
 ORG_variation_case.place(relx=0.6, rely=0.38)
 ORG_variation_case.bind('<FocusIn>', ORG_variation_case_info)
 ORG_variation_case.bind('<FocusOut>', info_dis)
 
-label_divsion = customtkinter.CTkLabel(master=frame_diffusion, text="Cell density intial value:", font=("Roboto", 16)).place(relx=0.05, rely=0.48)
+label_divsion = customtkinter.CTkLabel(master=frame_diffusion, text="Initial cell density value:", font=("Roboto", 16)).place(relx=0.05, rely=0.48)
 
 intial_dvision = ttk.Entry(master=frame_diffusion, font =("Aral",10) ,textvariable = def_intial_dvision , width=15)
 intial_dvision.place(relx=0.6, rely=0.48)
@@ -1124,7 +1124,7 @@ HV_exp.bind('<FocusOut>', info_dis)
 
 label_stiffness = customtkinter.CTkLabel(master=frame_stiffness, text="Mechanical properties Parameters", font=("Roboto", 20, "bold"), text_color=("darkgreen")).place(relx=0.5, rely=0.1, anchor=tk.CENTER)
 
-label_stiffness_case = customtkinter.CTkLabel(master=frame_stiffness, text="The state of the stiffness:", font=("Roboto", 16)).place(relx=0.05, rely=0.25)
+label_stiffness_case = customtkinter.CTkLabel(master=frame_stiffness, text="Cortical stiffness case:", font=("Roboto", 16)).place(relx=0.05, rely=0.25)
 
 stiffness_varying_case = ttk.Radiobutton(master=frame_stiffness ,text= "Varying", variable = def_stiffness_case, value='Varying', command=enable_entry_cmax)
 stiffness_constant_case = ttk.Radiobutton(master=frame_stiffness ,text= "Constant", variable = def_stiffness_case, value='Constant', command = disable_entry_cmax)
@@ -1137,14 +1137,14 @@ stiffness_constant_case.bind('<FocusOut>', info_dis)
 
 
 
-label_shear_modulus = customtkinter.CTkLabel(master=frame_stiffness, text="The shear modulus of conrtex:", font=("Roboto", 16)).place(relx=0.05, rely=0.4)
+label_shear_modulus = customtkinter.CTkLabel(master=frame_stiffness, text="Cortical shear modulus:", font=("Roboto", 16)).place(relx=0.05, rely=0.4)
 
 shear_modulus = ttk.Entry(master=frame_stiffness ,font =("Aral",10) ,textvariable = def_shear_modulus  ,width=15)
 shear_modulus.place(relx=0.6, rely=0.4)
 shear_modulus.bind('<FocusIn>', shear_modulus_info)
 shear_modulus.bind('<FocusOut>', info_dis)
 
-label_stiffness_ratio = customtkinter.CTkLabel(master=frame_stiffness, text="The ratio of stiffness:", font=("Roboto", 16)).place(relx=0.05, rely=0.55)
+label_stiffness_ratio = customtkinter.CTkLabel(master=frame_stiffness, text="Stiffness ratio:", font=("Roboto", 16)).place(relx=0.05, rely=0.55)
 
 stiffness_ratio = ttk.Entry(master=frame_stiffness ,font =("Aral",10) ,textvariable = def_stiffness_ratio  ,width=15)
 stiffness_ratio.place(relx=0.6, rely=0.55)
@@ -1159,7 +1159,7 @@ def_poisson_ratio.trace('w', check_poisson_ratio)
 poisson_ratio.bind('<FocusIn>', poisson_ratio_info)
 poisson_ratio.bind('<FocusOut>', info_dis)
 
-max_density_ratio = customtkinter.CTkLabel(master=frame_stiffness, text="The max cell density:", font=("Roboto", 16)).place(relx=0.05, rely=0.85)
+max_density_ratio = customtkinter.CTkLabel(master=frame_stiffness, text="Maximum cell density:", font=("Roboto", 16)).place(relx=0.05, rely=0.85)
 
 max_density = ttk.Entry(master=frame_stiffness ,font =("Aral",10) ,textvariable = def_max_density ,width=15, style ="max_density_style.TEntry" ,state = "disabled")
 max_density.place(relx=0.6, rely=0.85)
@@ -1171,7 +1171,7 @@ max_density.bind('<FocusOut>', info_dis)
 
 label_mesh = customtkinter.CTkLabel(master=frame_mesh, text="Discretization Parameters", font=("Roboto", 20, "bold"), text_color=("darkgreen")).place(relx=0.5, rely=0.08, anchor=tk.CENTER)
 
-label_case = customtkinter.CTkLabel(master=frame_mesh, text="State of gemotry:", font=("Roboto", 16)).place(relx=0.05, rely=0.18)
+label_case = customtkinter.CTkLabel(master=frame_mesh, text="Gemotry:", font=("Roboto", 16)).place(relx=0.05, rely=0.18)
 
 d2_case = ttk.Radiobutton(master=frame_mesh ,text= "2D", variable = def_case, value='2')
 d3_case = ttk.Radiobutton(master=frame_mesh ,text= "3D", variable = def_case, value='3')
@@ -1236,7 +1236,7 @@ c_k.bind('<FocusOut>', info_dis)
 label_solver = customtkinter.CTkLabel(master=frame_solver, text="Numerical solver Parameters", font=("Roboto", 20, "bold"), text_color=("darkgreen")).place(relx=0.5, rely=0.08, anchor=tk.CENTER)
 
 
-label_newton = customtkinter.CTkLabel(master=frame_solver, text="Max number newton iterations:", font=("Roboto", 16)).place(relx=0.05, rely=0.21)
+label_newton = customtkinter.CTkLabel(master=frame_solver, text="Maximum Newton iterations:", font=("Roboto", 16)).place(relx=0.05, rely=0.21)
 
 nonlinear_it = ttk.Entry(master=frame_solver,font =("Aral",10), textvariable = def_nonlinear_it  , width=15, style="nonlinear_style.TEntry")
 nonlinear_it.place(relx=0.6, rely=0.21)
@@ -1252,7 +1252,7 @@ def_tol_u.trace('w', check_tol_u)
 tol_u.bind('<FocusIn>', tol_u_info)
 tol_u.bind('<FocusOut>', info_dis)
 
-label_tol_c = customtkinter.CTkLabel(master=frame_solver, text="Tolerance residual diffusion :", font=("Roboto", 16)).place(relx=0.05, rely=0.47)
+label_tol_c = customtkinter.CTkLabel(master=frame_solver, text="Tolerance residual cell density:", font=("Roboto", 16)).place(relx=0.05, rely=0.47)
 
 tol_c = ttk.Entry(master=frame_solver,font =("Aral",10), textvariable = def_tol_c  , width=15, style="tol_c_style.TEntry")
 tol_c.place(relx=0.6, rely=0.47)
