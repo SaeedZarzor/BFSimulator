@@ -1017,7 +1017,7 @@ def check_k_growth(*args):
 #============================================== Gemotry frame ============================================
 style = ttk.Style()
 
-label_Gemotry = customtkinter.CTkLabel(master=frame_Gemotry, text="Gemotry Parameters", font=("Roboto", 20, "bold"), text_color=("darkgreen"))
+label_Gemotry = customtkinter.CTkLabel(master=frame_Gemotry, text="Geometry Parameters", font=("Roboto", 20, "bold"), text_color=("darkgreen"))
 label_Gemotry.place(relx=0.5, rely=0.1, anchor=tk.CENTER)
 
 label_vz = customtkinter.CTkLabel(master=frame_Gemotry, text="Ventricular zone raduis:", font=("Roboto", 16)).place(relx=0.05, rely=0.225)
@@ -1171,7 +1171,7 @@ max_density.bind('<FocusOut>', info_dis)
 
 label_mesh = customtkinter.CTkLabel(master=frame_mesh, text="Discretization Parameters", font=("Roboto", 20, "bold"), text_color=("darkgreen")).place(relx=0.5, rely=0.08, anchor=tk.CENTER)
 
-label_case = customtkinter.CTkLabel(master=frame_mesh, text="Gemotry:", font=("Roboto", 16)).place(relx=0.05, rely=0.18)
+label_case = customtkinter.CTkLabel(master=frame_mesh, text="Geometry:", font=("Roboto", 16)).place(relx=0.05, rely=0.18)
 
 d2_case = ttk.Radiobutton(master=frame_mesh ,text= "2D", variable = def_case, value='2')
 d3_case = ttk.Radiobutton(master=frame_mesh ,text= "3D", variable = def_case, value='3')
