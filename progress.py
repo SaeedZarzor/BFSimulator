@@ -1,4 +1,4 @@
-#!/opt/homebrew/bin/Python3
+#!/opt/homebrew/bin/Python3.10
 # change the directory above #
 ######################################
 
@@ -30,9 +30,9 @@ def play_gif():
     root2.after (0,play_gif)
 
 def Stop_function():
-    for process in psutil.process_iter():
+    for process in  psutil.process_iter():
         if process.name() == "Brain_growth":
-            os.system(" kill  /im  " + str(process.pid))
+            os.system(" kill  " + str(process.pid))
     root2.destroy()
 
 

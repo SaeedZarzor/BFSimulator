@@ -1,4 +1,4 @@
-#!/opt/homebrew/bin/Python3
+#!/opt/homebrew/bin/Python3.10
 # change the directory above #
 ######################################
 
@@ -380,7 +380,7 @@ def update_parameters():
         if "set c_k factor" in line:
             line = "        set c_k factor                                   = "+c_k.get()+" \n"
             
-        if "set The distribution shape of Outer RGCs" in line:
+        if "set The OSVZ regional variation" in line:
             line = "        set The OSVZ regional variation                  = "+ def_ORG_variation_case.get()+"\n"
             
         sys.stdout.write(line)
@@ -406,9 +406,9 @@ def messageWindow():
 
 def set_default_values():
     win = Toplevel(root)
-    x_position = 565+root.winfo_x()
+    x_position = 555+root.winfo_x()
     y_position = 325+root.winfo_y()
-    win.geometry(f"350x80+{x_position}+{y_position}")
+    win.geometry(f"370x80+{x_position}+{y_position}")
     win.title('Confirmation')
     message = "Are you sure that you want to set all values to  defaults?"
     L = Label(win, text=message)
@@ -585,7 +585,7 @@ def MST_factor_info(event):
 def ridial_rate_info(event):
     label_img2.configure(image=diffusion_image_Gvz)
     label_img2.place(relx=0.3, rely=0.5, anchor=tk.CENTER)
-    info_label.configure(text="Dvision rate in ventricular zone \nin [1/(mm^2 wk)]. \nThis factor mimics RGCs proliferation.")
+    info_label.configure(text="Division rate in ventricular zone \nin [1/(mm^2 wk)]. \nThis factor mimics RGCs proliferation.")
     info_label.place(relx=0.6, rely=0.1, anchor='nw')
     web_label.configure(text="For more details click here")
     web_label.place(relx=0.6, rely=0.4, anchor='nw')
@@ -594,7 +594,7 @@ def ridial_rate_info(event):
 def outer_ridial_rate_info(event):
     label_img2.configure(image=diffusion_image_Gosvz)
     label_img2.place(relx=0.3, rely=0.5, anchor=tk.CENTER)
-    info_label.configure(text="Dvision rate in outer-subventricular zone \nin [1/(mm^2 wk)]. \nThis factor mimics ORGCs proliferation.")
+    info_label.configure(text="Division rate in outer-subventricular zone \nin [1/(mm^2 wk)]. \nThis factor mimics ORGCs proliferation.")
     info_label.place(relx=0.6, rely=0.1, anchor='nw')
     
 def ORG_variation_case_info(event):
@@ -1064,14 +1064,14 @@ MST_factor.bind('<FocusOut>', info_dis)
 
 label_diffusion = customtkinter.CTkLabel(master=frame_diffusion, text="Advection diffusion Parameters", font=("Roboto", 20, "bold"), text_color=("darkgreen")).place(relx=0.5, rely=0.08, anchor=tk.CENTER)
 
-label_RG = customtkinter.CTkLabel(master=frame_diffusion, text="Cell dvision rate of RGCs:", font=("Roboto", 16)).place(relx=0.05, rely=0.18)
+label_RG = customtkinter.CTkLabel(master=frame_diffusion, text="Cell division rate of RGCs:", font=("Roboto", 16)).place(relx=0.05, rely=0.18)
 
 ridial_rate = ttk.Entry(master=frame_diffusion ,font =("Aral",10) ,textvariable = def_ridial_rate  ,width=15)
 ridial_rate.place(relx=0.6, rely=0.18)
 ridial_rate.bind('<FocusIn>', ridial_rate_info)
 ridial_rate.bind('<FocusOut>', info_dis)
 
-label_ORG = customtkinter.CTkLabel(master=frame_diffusion, text="Cell dvision rate of Outer RGCs:", font=("Roboto", 16)).place(relx=0.05, rely=0.28)
+label_ORG = customtkinter.CTkLabel(master=frame_diffusion, text="Cell division rate of Outer RGCs:", font=("Roboto", 16)).place(relx=0.05, rely=0.28)
 
 outer_ridial_rate = ttk.Entry(master=frame_diffusion,font =("Aral",10) ,textvariable = def_outer_ridial_rate  , width=15)
 outer_ridial_rate.place(relx=0.6, rely=0.28)

@@ -84,7 +84,7 @@ subsection General
         set Cell dvision rate of Outer RGCs              = 10 
 
 # Constant, Linear-gradient, Quadratic-gradient ,Random1, Random2, Random3
-        set The OSVZ regional variation     		 = Quadratic-gradient
+        set The OSVZ regional variation                  = Constant
 
  # Cell dvision intial value [1/(mm^2)]
         set Cell dvision intial value                    = 0 

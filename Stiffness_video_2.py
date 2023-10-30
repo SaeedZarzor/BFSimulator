@@ -107,11 +107,6 @@ stiffnessLUT = GetColorTransferFunction('Stiffness')
 # get opacity transfer function/opacity map for 'Stiffness'
 stiffnessPWF = GetOpacityTransferFunction('Stiffness')
 
-# Rescale transfer function
-stiffnessLUT.RescaleTransferFunction(0.0, 2.1)
-
-# Rescale transfer function
-stiffnessPWF.RescaleTransferFunction(0.0, 2.1)
 
 # set scalar coloring
 ColorBy(output_3_Display, ('POINTS', 'Stiffness', 'X'))
@@ -121,6 +116,12 @@ output_3_Display.RescaleTransferFunctionToDataRange(False, False)
 
 # Update a scalar bar component title.
 UpdateScalarBarsComponentTitle(stiffnessLUT, output_3_Display)
+
+# Rescale transfer function
+stiffnessLUT.RescaleTransferFunction(0.0, 2.1)
+
+# Rescale transfer function
+stiffnessPWF.RescaleTransferFunction(0.0, 2.1)
 
 # get layout
 layout1 = GetLayout()

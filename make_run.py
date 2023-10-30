@@ -1,4 +1,4 @@
-#!/opt/homebrew/bin/Python3
+#!/opt/homebrew/bin/Python3.10
 # change the directory above #
 ######################################
 
@@ -287,11 +287,8 @@ if not exists(make_file):
     subprocess.run(['make'])
     
 progress = subprocess.Popen('./progress.py')
-subprocess.run(['./Brain_growth', 'Parameters.prm',  sys.argv[1]])
-
-#for process in psutil.process_iter():
-#    if re.match("progress", process.name()):
-#        os.system("kill /im "+str(process.pid))’
+run_simulation = subprocess.run(['./Brain_growth', 'Parameters.prm',  sys.argv[1]])
+progress.kill()
 
 directory_folder = "Folder_Output"
 parent_dir_folder = os.getcwd()
