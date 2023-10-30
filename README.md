@@ -4,9 +4,11 @@ The project includes two parts. The first and core part is implemented using C++
 
 ![Alt](/Images/example.png)
 
-**Place note:** The current project version works for macOS powered by either intel or apple silicon. In case you would like to run it on other platforms (Linux or Windows), we would like to refer to the other project branches.
+**Please note:** The current project version works for macOS powered by either intel or apple silicon. In case you would like to run it on other platforms (Linux or Windows), we would like to refer to the other project branches.
 
 In the following, we explain the setup, installation, and configuration of the project step by step. If you do not want to run the second part of the project (user interface), place jump to the "configuration without Python3".
+
+**Please note:** This project is built based on the model introduced in the following paper ["Exploring the role of the outer subventricular zone during cortical folding through a physics-based model"](https://www.biorxiv.org/content/10.1101/2022.09.25.509401v1.abstract)
 
 ## Setup and installation
 The following packages/libraries are required to be installed before running the project.
