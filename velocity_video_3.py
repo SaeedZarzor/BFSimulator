@@ -1,13 +1,18 @@
 # trace generated using paraview version 5.10.0
 #import paraview
 #paraview.compatibility.major = 5
-#paraview.compatibility.minor = 10
+#paraview.compatibility.minor = 11
 
 #### import the simple module from the paraview
 from paraview.simple import *
+from paraview.simple import GetParaViewVersion
 from pathlib import Path
 import os
 import re
+
+######## verion info ##########
+version_info = GetParaViewVersion()
+minor_version = version_info['compatibility'][1]
 #### disable automatic camera reset on 'Show'
 paraview.simple._DisableFirstRenderCameraReset()
 

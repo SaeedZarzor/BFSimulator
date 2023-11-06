@@ -1,4 +1,4 @@
-#!/opt/homebrew/bin/Python3.10
+#!/usr/bin/python3
 # change the directory above #
 ######################################
 
@@ -26,13 +26,13 @@ def cell_video():
     file_exists = exists(path)
 
     if not file_exists:
-        Files = Path('/Applications')
+        Files = Path('/opt')
         for file in Files.iterdir():
             if re.match("ParaView", file.name):
                     Para_view = file
         
         Code_name = 'cell_density_video_'+str(sys.argv[1])+'.py'
-        export_results = subprocess.run([str(Para_view)+'/Contents/bin/pvpython',  Code_name])
+        export_results = subprocess.run([str(Para_view)+'/bin/pvpython',  Code_name])
 
         
     cap=cv2.VideoCapture(path)
@@ -44,7 +44,11 @@ def cell_video():
         ret, frame=cap.read()
         if not ret:
             break
-        cv2.imshow("Cell density", frame)
+        frame_size = cv2.resize(frame, (1918, 1109))
+        winname = "Cell density"
+        cv2.namedWindow(winname)       
+        cv2.moveWindow(winname, 40,30) 
+        cv2.imshow (winname, frame_size)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
@@ -57,32 +61,37 @@ def folds_pattern_image():
     path = 'Folder_Output/folds_pattern.png'
     file_exists = exists(path)
     if not file_exists:
-        Files = Path('/Applications')
+        Files = Path('/opt')
         for file in Files.iterdir():
             if re.match("ParaView", file.name):
                     Para_view = file
            
         Code_name = 'final_folding_pattren_'+str(sys.argv[1])+'.py'
-        export_results = subprocess.run([str(Para_view)+'/Contents/bin/pvpython',   Code_name])
+        export_results = subprocess.run([str(Para_view)+'/bin/pvpython',   Code_name])
 
         
     image = cv2.imread(path)
-    cv2.imshow ("Folds pattern", image)
+    image_size = cv2.resize(image, (1918, 1109))
+    winname = "Folds pattern"
+    cv2.namedWindow(winname)       
+    cv2.moveWindow(winname, 40,30) 
+    cv2.imshow (winname, image_size)
     k = cv2.waitKey(0)
     if (k == ord('q')):
         cv2.destroyAllWindows()
+        
         
 def velocity_video():
     path = 'Folder_Output/Velocity.avi'
     file_exists = exists(path)
     if not file_exists:
-        Files = Path('/Applications')
+        Files = Path('/opt')
         for file in Files.iterdir():
             if re.match("ParaView", file.name):
                     Para_view = file
                     
         Code_name = 'velocity_video_'+str(sys.argv[1])+'.py'
-        export_results = subprocess.run([str(Para_view)+'/Contents/bin/pvpython',   Code_name])
+        export_results = subprocess.run([str(Para_view)+'/bin/pvpython',   Code_name])
         
     cap=cv2.VideoCapture(path)
 
@@ -93,7 +102,11 @@ def velocity_video():
         ret, frame=cap.read()
         if not ret:
             break
-        cv2.imshow("Velocity", frame)
+        frame_size = cv2.resize(frame, (1918, 1109))
+        winname = "Velocity"
+        cv2.namedWindow(winname)       
+        cv2.moveWindow(winname, 40,30) 
+        cv2.imshow (winname, frame_size)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
@@ -105,13 +118,13 @@ def stiffness_video():
     path = 'Folder_Output/Stiffness.avi'
     file_exists = exists(path)
     if not file_exists:
-        Files = Path('/Applications')
+        Files = Path('/opt')
         for file in Files.iterdir():
             if re.match("ParaView", file.name):
                     Para_view = file
         
         Code_name = 'Stiffness_video_'+str(sys.argv[1])+'.py'
-        export_results = subprocess.run([str(Para_view)+'/Contents/bin/pvpython',   Code_name])
+        export_results = subprocess.run([str(Para_view)+'/bin/pvpython',   Code_name])
         
     cap=cv2.VideoCapture(path)
 
@@ -122,7 +135,11 @@ def stiffness_video():
         ret, frame=cap.read()
         if not ret:
             break
-        cv2.imshow("Stiffness", frame)
+        frame_size = cv2.resize(frame, (1918, 1109))
+        winname = "Stiffness"
+        cv2.namedWindow(winname)       
+        cv2.moveWindow(winname, 40,30) 
+        cv2.imshow (winname, frame_size)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
@@ -134,13 +151,13 @@ def growth_factores_t_video():
     path = 'Folder_Output/growth_factor_t.avi'
     file_exists = exists(path)
     if not file_exists:
-        Files = Path('/Applications')
+        Files = Path('/opt')
         for file in Files.iterdir():
             if re.match("ParaView", file.name):
                     Para_view = file
                     
         Code_name = 'growth_factors_video_'+str(sys.argv[1])+'.py'
-        export_results = subprocess.run([str(Para_view)+'/Contents/bin/pvpython',   Code_name])
+        export_results = subprocess.run([str(Para_view)+'/bin/pvpython',   Code_name])
 #        export_results.wait()
         
     cap=cv2.VideoCapture(path)
@@ -152,7 +169,11 @@ def growth_factores_t_video():
         ret, frame=cap.read()
         if not ret:
             break
-        cv2.imshow("Tangential growth factor", frame)
+        frame_size = cv2.resize(frame, (1918, 1109))
+        winname = "Tangential growth factor"
+        cv2.namedWindow(winname)       
+        cv2.moveWindow(winname, 40,30) 
+        cv2.imshow (winname, frame_size)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
@@ -164,13 +185,13 @@ def growth_factores_r_video():
     path = 'Folder_Output/growth_factor_r.avi'
     file_exists = exists(path)
     if not file_exists:
-        Files = Path('/Applications')
+        Files = Path('/opt')
         for file in Files.iterdir():
             if re.match("ParaView", file.name):
                     Para_view = file
                 
         Code_name = 'growth_factors_video_'+str(sys.argv[1])+'.py'
-        export_results = subprocess.run([str(Para_view)+'/Contents/bin/pvpython',   Code_name])
+        export_results = subprocess.run([str(Para_view)+'/bin/pvpython',   Code_name])
         
     cap=cv2.VideoCapture(path)
 
@@ -181,7 +202,11 @@ def growth_factores_r_video():
         ret, frame=cap.read()
         if not ret:
             break
-        cv2.imshow("Radial growth factor", frame)
+        frame_size = cv2.resize(frame, (1918, 1109))
+        winname = "Radial growth factor"
+        cv2.namedWindow(winname)       
+        cv2.moveWindow(winname, 40,30) 
+        cv2.imshow (winname, frame_size)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
@@ -193,13 +218,13 @@ def source_vz_video():
     path = 'Folder_Output/source_vz.avi'
     file_exists = exists(path)
     if not file_exists:
-        Files = Path('/Applications')
+        Files = Path('/opt')
         for file in Files.iterdir():
             if re.match("ParaView", file.name):
                     Para_view = file
                     
         Code_name = 'source_terms_video_'+str(sys.argv[1])+'.py'
-        export_results = subprocess.run([str(Para_view)+'/Contents/bin/pvpython',   Code_name])
+        export_results = subprocess.run([str(Para_view)+'/bin/pvpython',   Code_name])
         
     cap=cv2.VideoCapture(path)
 
@@ -210,7 +235,11 @@ def source_vz_video():
         ret, frame=cap.read()
         if not ret:
             break
-        cv2.imshow("RGCs Proliferation", frame)
+        frame_size = cv2.resize(frame, (1918, 1109))
+        winname = "RGCs Proliferation"
+        cv2.namedWindow(winname)       
+        cv2.moveWindow(winname, 40,30) 
+        cv2.imshow (winname, frame_size)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
@@ -222,13 +251,13 @@ def source_osvz_video():
     path = 'Folder_Output/source_osvz.avi'
     file_exists = exists(path)
     if not file_exists:
-        Files = Path('/Applications')
+        Files = Path('/opt')
         for file in Files.iterdir():
             if re.match("ParaView", file.name):
                     Para_view = file
                     
         Code_name = 'source_terms_video_'+str(sys.argv[1])+'.py'
-        export_results = subprocess.run([str(Para_view)+'/Contents/bin/pvpython',   Code_name])#        export_results.wait()
+        export_results = subprocess.run([str(Para_view)+'/bin/pvpython',   Code_name])#        export_results.wait()
         
     cap=cv2.VideoCapture(path)
 
@@ -239,7 +268,11 @@ def source_osvz_video():
         ret, frame=cap.read()
         if not ret:
             break
-        cv2.imshow("ORGCs Proliferation", frame)
+        frame_size = cv2.resize(frame, (1918, 1109))
+        winname = "ORGCs Proliferation"
+        cv2.namedWindow(winname)       
+        cv2.moveWindow(winname, 40,30) 
+        cv2.imshow (winname, frame_size)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
@@ -285,10 +318,14 @@ if not exists(cmake_file):
     
 if not exists(make_file):
     subprocess.run(['make'])
-    
+  
+  
 progress = subprocess.Popen('./progress.py')
-run_simulation = subprocess.run(['./Brain_growth', 'Parameters.prm',  sys.argv[1]])
-progress.kill()
+subprocess.run(['./Brain_growth', 'Parameters.prm',  sys.argv[1]])
+
+#for process in psutil.process_iter():
+#    if re.match("progress", process.name()):
+#        os.system("kill /im "+str(process.pid))’
 
 directory_folder = "Folder_Output"
 parent_dir_folder = os.getcwd()
@@ -316,8 +353,12 @@ shutil.copy(prm_filename, path_folder)
 post_processing = messagebox.askquestion("", "Done! \n Do you want to see the results?")
 if post_processing=="yes":
     root = customtkinter.CTk()
-    root.title("Results Output")
-    root.geometry("300x500")
+    screen_width = root.winfo_screenwidth()
+    screen_height = root.winfo_screenheight()
+    x_position = ((screen_width - 300) // 4)- 50
+    y_position = ((screen_height - 500) // 2) -100
+    root.title("Brain model parameters")
+    root.geometry(f"300x500+{x_position}+{y_position}")
     folds_pattern = customtkinter.CTkButton(master=root, text="Folds pattern", width = 250, command=folds_pattern_image)
     folds_pattern.pack(ipadx=10, ipady=5, expand=True)
     cell_video_button = customtkinter.CTkButton(master=root, text="Cell density distribution", width = 250, command=cell_video)

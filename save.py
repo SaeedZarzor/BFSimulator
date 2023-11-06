@@ -1,4 +1,4 @@
-#!/opt/homebrew/bin/Python3.10
+#!/usr/bin/python3
 # change the directory above #
 ######################################
 

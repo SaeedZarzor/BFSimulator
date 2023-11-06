@@ -1,4 +1,6 @@
-
+##
+#  CMake script for the step-3 tutorial program:
+##
 
 # Set the name of the project and target:
 
@@ -23,11 +25,11 @@ SET(TARGET_SRC
 
 # Usually, you will not need to modify anything beyond this point...
 
-CMAKE_MINIMUM_REQUIRED(VERSION 3.27.6)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.22.1)
 
 
-FIND_PACKAGE(deal.II 9.4 QUIET
-  HINTS ${deal.II_DIR} ${DEAL_II_DIR} /Users/saeed/dealii-candi/deal.II-v9.4.0/ $ENV{DEAL_II_DIR}
+FIND_PACKAGE(deal.II 9.4.2 QUIET
+  HINTS ${deal.II_DIR} ${DEAL_II_DIR} ../ ../../ $ENV{DEAL_II_DIR}
   )
 IF(NOT ${deal.II_FOUND})
   MESSAGE(FATAL_ERROR "\n"
@@ -43,4 +45,9 @@ DEAL_II_INITIALIZE_CACHED_VARIABLES()
 PROJECT(${TARGET})
 DEAL_II_INVOKE_AUTOPILOT()
 
-
+# find the Boost libraries
+set (BOOST_ROOT ${DEAL_II_BOOST_DIR})
+find_package (Boost 1.68.0 REQUIRED COMPONENTS filesystem)
+INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIR})
+LINK_DIRECTORIES(${Boost_LIBRARY_DIRS})
+TARGET_LINK_LIBRARIES(Brain_growth ${Boost_LIBRARIES}) 

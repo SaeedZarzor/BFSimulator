@@ -1,7 +1,7 @@
 # trace generated using paraview version 5.10.0
 #import paraview
 #paraview.compatibility.major = 5
-#paraview.compatibility.minor = 10
+#paraview.compatibility.minor = 11
 
 #### import the simple module from the paraview
 from paraview.simple import *
