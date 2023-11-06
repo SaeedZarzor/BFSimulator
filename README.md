@@ -8,7 +8,7 @@ The project includes two parts. The first and core part is implemented using C++
 
 In the following, we explain the setup, installation, and configuration of the project step by step. If you do not want to run the second part of the project (user interface), place jump to the "configuration without Python3".
 
-**Please note:** This project is built based on the model introduced in the following paper ["Exploring the role of the outer subventricular zone during cortical folding through a physics-based model"](https://www.biorxiv.org/content/10.1101/2022.09.25.509401v1.abstract)
+**Please note:** This project is built based on the model introduced in the following paper ["Exploring the role of the outer subventricular zone during cortical folding through a physics-based model"](https://elifesciences.org/articles/82925)
 
 ## Setup and installation
 The following packages/libraries are required to be installed before running the project.
