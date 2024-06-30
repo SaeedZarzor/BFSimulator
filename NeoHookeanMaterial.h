@@ -19,9 +19,9 @@ class NeoHookeanMaterial
 {
     public:
 				
-        NeoHookeanMaterial(const std::string stiffness_case, const double shear_modulud_cortex, const double Poisson, const double stiffness_ratio ,const double max_cell_density, const double subcortix_raduis):
-      st_case(stiffness_case), mu_cmax(shear_modulud_cortex), mu_s(shear_modulud_cortex/stiffness_ratio), nu(Poisson) ,c_max(max_cell_density), R_c(subcortix_raduis),
-        F_e( Physics::Elasticity::StandardTensors< dim >::I), J_e(1.0)
+        NeoHookeanMaterial(const std::string stiffness_case, const double shear_modulud_cortex, const double Poisson, const double stiffness_ratio ,const double max_cell_density,const double &cp_radial_exp, const double subcortix_raduis):
+      st_case(stiffness_case), mu_cmax(shear_modulud_cortex), mu_s(shear_modulud_cortex/stiffness_ratio), nu(Poisson) ,c_max(max_cell_density),cp_exp(cp_radial_exp),R_c(subcortix_raduis),
+      F_e( Physics::Elasticity::StandardTensors< dim >::I), J_e(1.0)
         {}
         
         
@@ -45,7 +45,7 @@ class NeoHookeanMaterial
          else if (dim ==3)
              r = p.distance(Point<dim>(0.0,0.0, 0.0));
 
-	      H    = std::exp((r-R_c)*20)/(1+std::exp((r-R_c)*20));
+	      H    = std::exp((r-R_c)*cp_exp)/(1+std::exp((r-R_c)*cp_exp));
               mu        = mu_s+((mu_c-mu_s)*H);
 	      dmu_dc    = dmuc_dc*H;
               Lamda     = (2*mu*nu)/(1-(2*nu));
@@ -118,6 +118,7 @@ class NeoHookeanMaterial
     const double nu;
 	const double c_max;
     double r;
+    const double cp_exp;
     const double R_c;
     double H;
 

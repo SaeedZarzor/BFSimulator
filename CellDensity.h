@@ -18,15 +18,14 @@ class CellDensity
      public:
        
 	CellDensity(const double &cell_dvision_rate_v, const double &cell_dvision_rate_ovz, const double &cell_migration_speed,  
-    const double &diffusivity, const double &cell_migration_threshold, const double &exponent, const double &damention_ratio, const double &V_raduis, const double &subcortix_raduis,
-        const double &IVZ_raduis, const double &OVZ_raduis, const double &MST_factor, const std::string &OSVZ_divion_distr):
+    const double &diffusivity, const double &cell_migration_threshold, const double &exponent, const double &damention_ratio, const double &V_raduis, const double &subcortix_raduis,const double &IVZ_raduis, const double &OVZ_raduis, const double &MST_factor,const double &cp_radial_exp, const double &radial_exp, const std::string &OSVZ_divion_distr):
 	G_c_v(cell_dvision_rate_v), G_c_ovz(cell_dvision_rate_ovz),
         v(cell_migration_speed), 
 	d_cc(diffusivity), c_0(cell_migration_threshold), 
         gamma(exponent), alpha(damention_ratio), 
         r_v(V_raduis), R_c(subcortix_raduis), 
 	r_ivz(IVZ_raduis),r_osvz(OVZ_raduis),c_mst(MST_factor),
-    OSVZ_varying(OSVZ_divion_distr),
+    cp_exp(cp_radial_exp), z_exp(radial_exp), OSVZ_varying(OSVZ_divion_distr),
     first_cell_flux_term(Tensor<1, dim>()),
     second_cell_flux_term(Tensor<1, dim>())
         {}
@@ -85,7 +84,7 @@ class CellDensity
             }
 
         
-        double G_c_r = G_c_t*(1-heaviside_function((r-r_v),50));
+        double G_c_r = G_c_t*(1-heaviside_function((r-r_v),z_exp));
                
         return G_c_r;
       
@@ -128,7 +127,7 @@ class CellDensity
           r = p.distance(Point<dim>(0.0,0.0, 0.0));
           G_c_t = G_c_ovz;
       }
-      double G_c_r = G_c_t * sin  * (heaviside_function((r-r_ivz),50)-heaviside_function((r-r_ovz_t),50));
+      double G_c_r = G_c_t * sin  * (heaviside_function((r-r_ivz),z_exp)-heaviside_function((r-r_ovz_t),z_exp));
                   return G_c_r;
      
                }
@@ -150,7 +149,7 @@ class CellDensity
              r = p.distance(Point<dim>(0.0,0.0));
             else if (dim ==3)
                 r = p.distance(Point<dim>(0.0,0.0, 0.0));
-            return (v*(1-heaviside_function((r-R_c),10)));}
+            return (v*(1-heaviside_function((r-R_c),cp_exp)));}
     
         double  get_dcc_r(const Point<dim> &p)  {
             double r =0;
@@ -158,7 +157,7 @@ class CellDensity
              r = p.distance(Point<dim>(0.0,0.0));
             else if (dim ==3)
                 r = p.distance(Point<dim>(0.0,0.0, 0.0));
-            return (d_cc*(heaviside_function((r-R_c),10)));}
+            return (d_cc*(heaviside_function((r-R_c),cp_exp)));}
         
         Tensor<1, dim> get_first_flux_term() const {return first_cell_flux_term;}
         Tensor<1, dim> get_second_flux_term() const {return second_cell_flux_term;}
@@ -183,6 +182,8 @@ class CellDensity
         double r_ivz;
         double r_osvz;
         double c_mst;
+        double cp_exp;
+        double z_exp;
 
         std::string OSVZ_varying;
         Tensor<1 ,dim> grad_c_s;

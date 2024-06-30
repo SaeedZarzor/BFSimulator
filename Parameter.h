@@ -23,6 +23,7 @@ struct GeneralParameters
     std::string solver_type;
     std::string stiffness_case;
     std::string OSVZ_divion_distr;
+    std::string three_D_geometry;
 	double tolerance_residual_u;
     double tolerance_residual_c;
 	unsigned int global_refinements;
@@ -55,6 +56,8 @@ struct GeneralParameters
 	double MST_factor;
     double Betta;
 	double c_k;
+    double cp_radial_exp;
+    double radial_exp;
     
 	
 	
@@ -80,6 +83,11 @@ void GeneralParameters::declare_parameters(ParameterHandler &prm)
 		prm.declare_entry ("Poly degree","1",
 						   Patterns::Integer(),
 				"The polynomial degree of the FE");
+        
+        prm.declare_entry ("3D geometry shape", "half",
+                            Patterns::Anything(),
+                            "3D geometry shape quarter or half");
+        
 		prm.declare_entry ("Number global refinements","1",
 						   Patterns::Integer(),
 				 "The number of mesh global refinements");
@@ -106,6 +114,14 @@ void GeneralParameters::declare_parameters(ParameterHandler &prm)
 	 	prm.declare_entry ("Mitotic somal translocation factor","0.05",
 						   Patterns::Double(),
 					"Mitotic somal translocation factor (value <= 0.1)");
+        
+        prm.declare_entry ("Cortex radial exponent","50",
+                          Patterns::Double(),
+                   "Cortex radial function exponent");
+        
+        prm.declare_entry ("Other radial exponent","20",
+                          Patterns::Double(),
+                   "Other radial function exponent");
 
 		prm.declare_entry ("Total time","1",
 						   Patterns::Double(),
@@ -199,39 +215,42 @@ void GeneralParameters::parse_parameters (ParameterHandler &prm)
     {
         stiffness_case = prm.get("The state of the stiffness");
 		tolerance_residual_u=prm.get_double("Tolerance residual deformation");
-                tolerance_residual_c=prm.get_double("Tolerance residual diffusion");
+        tolerance_residual_c=prm.get_double("Tolerance residual diffusion");
 		global_refinements =prm.get_integer("Number global refinements");
+        three_D_geometry = prm.get("3D geometry shape");
 		Poisson=prm.get_double("Poisson's ratio");
 		shear_modulud_cortex=prm.get_double("The shear modulus of conrtex");
-	        stiffness_ratio=prm.get_double("The ratio of stiffness");
+        stiffness_ratio=prm.get_double("The ratio of stiffness");
 		max_cell_density=prm.get_double("The max cell density");
 		total_time = prm.get_double("Total time");
-                time_step = prm.get_double("Time step size");
+        time_step = prm.get_double("Time step size");
 		output_file_name = prm.get("Output file name");
 		degree = prm.get_integer("Poly degree");
-                scale = prm.get_double("Grid scale");
-                max_number_newton_iterations = prm.get_integer("Max number newton iterations");
-                multiplier_max_iterations_linear_solver = prm.get_integer("Multiplier max iterations linear solver");
-                growth_rate = prm.get_double("Growth rate");
-                growth_ratio = prm.get_double("Growth ratio");
-                initial_radius = prm.get_double("Initial radius");
-                cortex_thickness = prm.get_double("Cortex thickness");
-                ventricular_raduis = prm.get_double("Ventricular zone raduis");
+        scale = prm.get_double("Grid scale");
+        max_number_newton_iterations = prm.get_integer("Max number newton iterations");
+        multiplier_max_iterations_linear_solver = prm.get_integer("Multiplier max iterations linear solver");
+        growth_rate = prm.get_double("Growth rate");
+        growth_ratio = prm.get_double("Growth ratio");
+        initial_radius = prm.get_double("Initial radius");
+        cortex_thickness = prm.get_double("Cortex thickness");
+        ventricular_raduis = prm.get_double("Ventricular zone raduis");
 		subventricular_raduis = prm.get_double("Subventricular zone raduis");
 		MST_factor = prm.get_double("Mitotic somal translocation factor");
-                cell_dvision_rate_v = prm.get_double("Cell dvision rate of RGCs");
+        cp_radial_exp = prm.get_double("Cortex radial exponent");
+        radial_exp = prm.get_double("Other radial exponent");
+        cell_dvision_rate_v = prm.get_double("Cell dvision rate of RGCs");
  		cell_dvision_rate_ovz = prm.get_double("Cell dvision rate of Outer RGCs");
         OSVZ_divion_distr = prm.get("The OSVZ regional variation");
 		dvision_value = prm.get_double("Cell dvision intial value");
-                cell_migration_speed = prm.get_double("Cell migration speed");
-                diffusivity = prm.get_double("Diffusivity");
-                cell_migration_threshold = prm.get_double("Cell migration threshold");
-                exponent = prm.get_double("Heaviside function exponent");
-                growth_exponent = prm.get_double("Growth exponent");
-                solver_type = prm.get("Linear solver type");
-                tol_u = prm.get_double("Tolerance update");
-                damention_ratio = prm.get_double("Damention ratio");
-    	        Betta = prm.get_double("Stabilization constant");
+        cell_migration_speed = prm.get_double("Cell migration speed");
+        diffusivity = prm.get_double("Diffusivity");
+        cell_migration_threshold = prm.get_double("Cell migration threshold");
+        exponent = prm.get_double("Heaviside function exponent");
+        growth_exponent = prm.get_double("Growth exponent");
+        solver_type = prm.get("Linear solver type");
+        tol_u = prm.get_double("Tolerance update");
+        damention_ratio = prm.get_double("Damention ratio");
+        Betta = prm.get_double("Stabilization constant");
 		c_k = prm.get_double("c_k factor");
 
 

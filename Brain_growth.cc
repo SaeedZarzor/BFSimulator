@@ -1,9 +1,7 @@
  /* ---------------------------------------------------------------------
  *
- * Copyright (C) 2019 - 2023 by the deal.II authors and Mohammad Saeed Zarzor
- *
- * This file is part of the deal.II library.
- *
+ * Copyright (C) 2019 - 2024 by the deal.II authors and Mohammad Saeed Zarzor
+ * *
  * The deal.II library is free software; you can use it, redistribute
  * it, and/or modify it under the terms of the GNU Lesser General
  * Public License as published by the Free Software Foundation; either
@@ -145,10 +143,11 @@ namespace Brain_growth
 	     Assert(value.size() == dim + 1, ExcDimensionMismatch(value.size(), dim + 1));  
 
          double r =0;
-         if (dim ==2)
-	      r= p.distance(Point<dim>(0.0,0.0));
-         else if (dim==3)
-             r= p.distance(Point<dim>(0.0,0.0,0.0));
+             if (dim ==2)
+                 r= p.distance(Point<dim>(0.0,0.0));
+             else if (dim==3)
+                 r= p.distance(Point<dim>(0.0,0.0,0.0));
+         
 
 	     double H = (std::exp((r-dvision_raduis)*5))/(1.+std::exp((r-dvision_raduis)*5)); 
 
@@ -832,15 +831,28 @@ template <int dim>
       
       else if (dim ==3){
           const Point<dim> Center (0.0, 0.0,0.0);
-          GridGenerator::half_hyper_shell(triangulation, Center, 0.2*parameters.initial_radius , 1.0*parameters.initial_radius,0,true);
-          global_Omega_diameter = GridTools::diameter(triangulation);
-          GridTools::transform (Rotate3d<dim>(angle, 2), triangulation);
+
+          if (parameters.three_D_geometry == "quarter")
+          {
+              GridGenerator::quarter_hyper_shell(triangulation, Center, 0.2*parameters.initial_radius , 1.0*parameters.initial_radius,0,true);
+          }
+          
+          else if (parameters.three_D_geometry == "half")
+          {
+              GridGenerator::half_hyper_shell(triangulation, Center, 0.2*parameters.initial_radius , 1.0*parameters.initial_radius,0,true);
+              GridTools::transform (Rotate3d<dim>(angle, 2), triangulation);
+          }
+          
           const SphericalManifold<dim> manifold(Center);
           triangulation.set_all_manifold_ids_on_boundary(0);
           triangulation.refine_global(std::max (1U, parameters.global_refinements));
+          global_Omega_diameter = GridTools::diameter(triangulation);
           triangulation.set_manifold (0, manifold);
 
       }
+      
+
+      
       else
           Assert(dim<3, ExcInternalError());
       
@@ -1649,7 +1661,8 @@ template <int dim>
   {
     std::cout << " CST " << std::flush;
 
-      if (dim==2){
+      if (dim==2)
+      {
           if (it_nr > 1)
               return;
           constraints.clear();
@@ -1724,7 +1737,8 @@ template <int dim>
           }
       }
     
-      else if (dim==3){
+      else if (dim==3)
+      {
           if (it_nr > 1)
             return;
           constraints.clear();
@@ -1734,54 +1748,125 @@ template <int dim>
           const FEValuesExtractors::Scalar y_displacement(1);
           const FEValuesExtractors::Scalar z_displacement(2);
           
-          
+          if (parameters.three_D_geometry =="quarter")
           {
+              {
                   const int boundary_id = 2;
-
-              if (apply_dirichlet_bc == true)
-              {
-                  VectorTools::interpolate_boundary_values(dof_handler_ref,
-                                                          boundary_id,
-                                                          ZeroFunction<dim>(n_components),
-                                                          constraints,
-                                                          fe.component_mask(y_displacement));
+                  
+                  if (apply_dirichlet_bc == true)
+                  {
+                      VectorTools::interpolate_boundary_values(dof_handler_ref,
+                                                               boundary_id,
+                                                               ZeroFunction<dim>(n_components),
+                                                               constraints,
+                                                               fe.component_mask(x_displacement));
+                      
+                  }
+                  else
+                  {
+                      VectorTools::interpolate_boundary_values(dof_handler_ref,
+                                                               boundary_id,
+                                                               ZeroFunction<dim>(n_components),
+                                                               constraints,
+                                                               fe.component_mask(x_displacement));
+                      
+                  }
+              } // for half geomtery y_displacement
               
-              }
-              else
               {
-                   VectorTools::interpolate_boundary_values(dof_handler_ref,
-                                                                                          boundary_id,
-                                                           ZeroFunction<dim>(n_components),
-                                                          constraints,
-                                                          fe.component_mask(y_displacement));
-
+                  const int boundary_id = 3;
+                  
+                  if (apply_dirichlet_bc == true)
+                  {
+                      VectorTools::interpolate_boundary_values(dof_handler_ref,
+                                                               boundary_id,
+                                                               ZeroFunction<dim>(n_components),
+                                                               constraints,
+                                                               fe.component_mask(y_displacement));
+                      
+                  }
+                  else
+                  {
+                      VectorTools::interpolate_boundary_values(dof_handler_ref,
+                                                               boundary_id,
+                                                               ZeroFunction<dim>(n_components),
+                                                               constraints,
+                                                               fe.component_mask(y_displacement));
+                      
+                  }
               }
-          } // for half geomtery
-
-          {
-              const int boundary_id = 0;
-              if (apply_dirichlet_bc == true)
+              
               {
-                  VectorTools::interpolate_boundary_values(dof_handler_ref,
-                                                          boundary_id,
-                                                          ZeroFunction<dim>(n_components),
-                                                          constraints,
-                                                          fe.component_mask(displacement));
-              }
-              else
-              {
-                  VectorTools::interpolate_boundary_values(dof_handler_ref,
-                                                          boundary_id,
-                                                          ZeroFunction<dim>(n_components),
-                                                          constraints,
-                                                          fe.component_mask(displacement));
+                  const int boundary_id = 4;
+                  
+                  if (apply_dirichlet_bc == true)
+                  {
+                      VectorTools::interpolate_boundary_values(dof_handler_ref,
+                                                               boundary_id,
+                                                               ZeroFunction<dim>(n_components),
+                                                               constraints,
+                                                               fe.component_mask(z_displacement));
+                      
+                  }
+                  else
+                  {
+                      VectorTools::interpolate_boundary_values(dof_handler_ref,
+                                                               boundary_id,
+                                                               ZeroFunction<dim>(n_components),
+                                                               constraints,
+                                                               fe.component_mask(z_displacement));
+                      
+                  }
               }
           }
-          
+          else if (parameters.three_D_geometry =="half")
+          {
+                  const int boundary_id = 2;
+                  
+                  if (apply_dirichlet_bc == true)
+                  {
+                      VectorTools::interpolate_boundary_values(dof_handler_ref,
+                                                               boundary_id,
+                                                               ZeroFunction<dim>(n_components),
+                                                               constraints,
+                                                               fe.component_mask(y_displacement));
+                      
+                  }
+                  else
+                  {
+                      VectorTools::interpolate_boundary_values(dof_handler_ref,
+                                                               boundary_id,
+                                                               ZeroFunction<dim>(n_components),
+                                                               constraints,
+                                                               fe.component_mask(y_displacement));
+                      
+                  }
+          }
+              
+              {
+                  const int boundary_id = 0;
+                  if (apply_dirichlet_bc == true)
+                  {
+                      VectorTools::interpolate_boundary_values(dof_handler_ref,
+                                                               boundary_id,
+                                                               ZeroFunction<dim>(n_components),
+                                                               constraints,
+                                                               fe.component_mask(displacement));
+                  }
+                  else
+                  {
+                      VectorTools::interpolate_boundary_values(dof_handler_ref,
+                                                               boundary_id,
+                                                               ZeroFunction<dim>(n_components),
+                                                               constraints,
+                                                               fe.component_mask(displacement));
+                  }
+              }
+              
       }
 
     constraints.close();
-}
+  }
 
 
   template <int dim>
