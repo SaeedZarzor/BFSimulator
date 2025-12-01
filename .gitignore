@@ -1,0 +1,41 @@
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Python build/cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+.Python
+env/
+.env
+venv/
+.venv/
+pip-wheel-metadata/
+*.egg-info/
+.eggs/
+
+# CMake and general build outputs
+build/
+/build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.exe
+
+# IDE/editor metadata
+.vscode/
+.idea/
+*.code-workspace
+
+# Simulation outputs
+Output_*.vtk
