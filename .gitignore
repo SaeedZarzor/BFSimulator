@@ -17,6 +17,9 @@ pip-wheel-metadata/
 *.egg-info/
 .eggs/
 
+# Compiled binary
+Brain_growth
+
 # CMake and general build outputs
 build/
 /build/
@@ -39,3 +42,4 @@ compile_commands.json
 
 # Simulation outputs
 Output_*.vtk
+*.csv
