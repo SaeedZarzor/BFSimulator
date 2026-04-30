@@ -43,3 +43,4 @@ compile_commands.json
 # Simulation outputs
 Output_*.vtk
 *.csv
+*.svg
