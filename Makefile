@@ -57,10 +57,10 @@ RM = /opt/homebrew/Cellar/cmake/3.27.7/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/saeed/Documents/GitHub/BFSimulator
+CMAKE_SOURCE_DIR = "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/saeed/Documents/GitHub/BFSimulator
+CMAKE_BINARY_DIR = "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/saeed/Documents/GitHub/BFSimulator/CMakeFiles /Users/saeed/Documents/GitHub/BFSimulator//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/CMakeFiles" "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/saeed/Documents/GitHub/BFSimulator/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target

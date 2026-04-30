@@ -43,4 +43,11 @@ DEAL_II_INITIALIZE_CACHED_VARIABLES()
 PROJECT(${TARGET})
 DEAL_II_INVOKE_AUTOPILOT()
 
+if(APPLE)
+  add_custom_command(TARGET ${TARGET} POST_BUILD
+    COMMAND ${CMAKE_SOURCE_DIR}/fix_dylib_deps.sh $<TARGET_FILE:${TARGET}>
+    COMMENT "Rewriting bare-basename dylib deps to absolute paths"
+  )
+endif()
+
 
