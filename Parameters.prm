@@ -56,13 +56,13 @@ subsection General
         set Max number newton iterations                  = 8 
 
  # The tolerance wrt the normalised residual deformation
-        set Tolerance residual deformation                =1e-8 
+        set Tolerance residual deformation                = 1.0e-8 
 
  # The tolerance wrt the normalised residual diffusion
-        set Tolerance residual diffusion                  = 1e-8 
+        set Tolerance residual diffusion                  = 1.0e-8 
 
  # The tolerance wrt the normalised residual norm
-        set Tolerance update                              = 0.0001 
+        set Tolerance update                              = 1.0e-4 
 
  # The value of the Poisson's ratio
         set Poisson's ratio                              = 0.38 
@@ -77,7 +77,7 @@ subsection General
         set The max cell density                         = 700 
  
  # Growth rate
-        set Growth rate                                   = 0.00047 
+        set Growth rate                                   = 4.7e-4 
  
  # Growth exponent alpha
         set Growth exponent                               = 1.65 

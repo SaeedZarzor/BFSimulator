@@ -44,3 +44,9 @@ compile_commands.json
 Output_*.vtk
 *.csv
 *.svg
+
+# Claude
+CLAUDE.md
+graphs/
+.wolf/
+.claude/

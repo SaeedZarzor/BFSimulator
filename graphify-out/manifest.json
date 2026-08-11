@@ -1,0 +1,252 @@
+{
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/.claude/settings.json": {
+    "mtime": 1786366041.9600892,
+    "ast_hash": "890f997c7acd24044b0ea90fb6da6940",
+    "semantic_hash": "890f997c7acd24044b0ea90fb6da6940"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/.wolf/buglog.json": {
+    "mtime": 1786366041.9496229,
+    "ast_hash": "445a57cfd3645eeacb8456549fd59f78",
+    "semantic_hash": "445a57cfd3645eeacb8456549fd59f78"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/.wolf/config.json": {
+    "mtime": 1786366041.9462912,
+    "ast_hash": "7a6fbfd1104e00a49a2279d33edf995c",
+    "semantic_hash": "7a6fbfd1104e00a49a2279d33edf995c"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/.wolf/cron-manifest.json": {
+    "mtime": 1786366041.950243,
+    "ast_hash": "82f3966625fdb035f5b6c7ffe2cc1e5e",
+    "semantic_hash": "82f3966625fdb035f5b6c7ffe2cc1e5e"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/.wolf/cron-state.json": {
+    "mtime": 1786366041.9503765,
+    "ast_hash": "7a5dd686eb67b5ce36ffc5a06976cd2f",
+    "semantic_hash": "7a5dd686eb67b5ce36ffc5a06976cd2f"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/.wolf/designqc-report.json": {
+    "mtime": 1786366041.9510565,
+    "ast_hash": "54ee4dcccbaf769865db106a4ff7f3a3",
+    "semantic_hash": "54ee4dcccbaf769865db106a4ff7f3a3"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/.wolf/hooks/package.json": {
+    "mtime": 1786366041.959953,
+    "ast_hash": "d0707362e90f00edd12435e9d3b9d71c",
+    "semantic_hash": "d0707362e90f00edd12435e9d3b9d71c"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/.wolf/hooks/post-read.js": {
+    "mtime": 1786366041.9585257,
+    "ast_hash": "0a189e820069291ea72f8ca7c80d215d",
+    "semantic_hash": "0a189e820069291ea72f8ca7c80d215d"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/.wolf/hooks/post-write.js": {
+    "mtime": 1786366041.9589667,
+    "ast_hash": "25255e2ee01554cc5d7c857fa3c4344e",
+    "semantic_hash": "25255e2ee01554cc5d7c857fa3c4344e"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/.wolf/hooks/pre-read.js": {
+    "mtime": 1786366041.9578593,
+    "ast_hash": "097a84d5cad109a005827852ea5ac4d2",
+    "semantic_hash": "097a84d5cad109a005827852ea5ac4d2"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/.wolf/hooks/pre-write.js": {
+    "mtime": 1786366041.9582932,
+    "ast_hash": "6a12db8b7758f7e912db6942d141dbf0",
+    "semantic_hash": "6a12db8b7758f7e912db6942d141dbf0"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/.wolf/hooks/session-start.js": {
+    "mtime": 1786366041.9575863,
+    "ast_hash": "6b11797411a26b44033ba0371b9045de",
+    "semantic_hash": "6b11797411a26b44033ba0371b9045de"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/.wolf/hooks/shared.js": {
+    "mtime": 1786366041.9598558,
+    "ast_hash": "f7c0a2fe764621823a2dc9722cccc814",
+    "semantic_hash": "f7c0a2fe764621823a2dc9722cccc814"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/.wolf/hooks/stop.js": {
+    "mtime": 1786366041.9594522,
+    "ast_hash": "bc7b2a7bd518f21516a0c664d3aa80e1",
+    "semantic_hash": "bc7b2a7bd518f21516a0c664d3aa80e1"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/.wolf/suggestions.json": {
+    "mtime": 1786366041.9511814,
+    "ast_hash": "fc212b284acef6b990495fbdc00a6321",
+    "semantic_hash": "fc212b284acef6b990495fbdc00a6321"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/BFSimulator.py": {
+    "mtime": 1698874470.0,
+    "ast_hash": "d09f782ee533bf910fd63485cbd4df2c",
+    "semantic_hash": "d09f782ee533bf910fd63485cbd4df2c"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/Brain_growth.cc": {
+    "mtime": 1732706370.5021358,
+    "ast_hash": "e9a3965657841cecec5a13ad5d166df4",
+    "semantic_hash": "e9a3965657841cecec5a13ad5d166df4"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/CellDensity.h": {
+    "mtime": 1732706370.5026515,
+    "ast_hash": "55e97e9afda58519d3f3a25aedf27e4f",
+    "semantic_hash": "55e97e9afda58519d3f3a25aedf27e4f"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/Growth.h": {
+    "mtime": 1732706370.5028203,
+    "ast_hash": "5ae0481deab2e64c9731c006c64b84e0",
+    "semantic_hash": "5ae0481deab2e64c9731c006c64b84e0"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/NeoHookeanMaterial.h": {
+    "mtime": 1732706370.5554411,
+    "ast_hash": "262314c1dfbfefd2eebe0628a042b7ee",
+    "semantic_hash": "262314c1dfbfefd2eebe0628a042b7ee"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/NonStandardTensors.h": {
+    "mtime": 1732706370.5555212,
+    "ast_hash": "ac3dec7e66ccb86ebe8696e290940ea5",
+    "semantic_hash": "ac3dec7e66ccb86ebe8696e290940ea5"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/Parameter.h": {
+    "mtime": 1732706370.5556922,
+    "ast_hash": "8098117157fc3d7711b80e54bda6c103",
+    "semantic_hash": "8098117157fc3d7711b80e54bda6c103"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/PointHistory.h": {
+    "mtime": 1732706370.5558312,
+    "ast_hash": "f9a07ce2421dbb295ad9885cc942c262",
+    "semantic_hash": "f9a07ce2421dbb295ad9885cc942c262"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/Stiffness_video_2.py": {
+    "mtime": 1732706370.5561025,
+    "ast_hash": "31faa21c39da17850727fc010c0791e2",
+    "semantic_hash": "31faa21c39da17850727fc010c0791e2"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/Stiffness_video_3.py": {
+    "mtime": 1732706370.55625,
+    "ast_hash": "4423e73fec208558b1c2fafe05af2ae1",
+    "semantic_hash": "4423e73fec208558b1c2fafe05af2ae1"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/cell_density_video_2.py": {
+    "mtime": 1732706370.5563805,
+    "ast_hash": "8f651b0201fe0251dd6db00ea08a0a9b",
+    "semantic_hash": "8f651b0201fe0251dd6db00ea08a0a9b"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/cell_density_video_3.py": {
+    "mtime": 1732706370.5564992,
+    "ast_hash": "391b41f241013cec54e46be5b3d6c66c",
+    "semantic_hash": "391b41f241013cec54e46be5b3d6c66c"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/final_folding_pattren_2.py": {
+    "mtime": 1732706370.5566065,
+    "ast_hash": "e77cccf5632390f67356106ed804ae16",
+    "semantic_hash": "e77cccf5632390f67356106ed804ae16"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/final_folding_pattren_3.py": {
+    "mtime": 1732706370.5567555,
+    "ast_hash": "c302fdf3a3d8acd84afdf093baa6a36f",
+    "semantic_hash": "c302fdf3a3d8acd84afdf093baa6a36f"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/fix_dylib_deps.sh": {
+    "mtime": 1777538039.7195015,
+    "ast_hash": "6178d64e1f80b40a3ebf2f49cca2de6b",
+    "semantic_hash": "6178d64e1f80b40a3ebf2f49cca2de6b"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/growth_factors_video_2.py": {
+    "mtime": 1732706370.5568645,
+    "ast_hash": "8b3ea60ddc1814c4d979000e66548dc6",
+    "semantic_hash": "8b3ea60ddc1814c4d979000e66548dc6"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/growth_factors_video_3.py": {
+    "mtime": 1732706370.5569649,
+    "ast_hash": "afd1d529534f7d941e7592464aa5ae94",
+    "semantic_hash": "afd1d529534f7d941e7592464aa5ae94"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/make_run.py": {
+    "mtime": 1697316154.0,
+    "ast_hash": "c460350e0f8d76436ff3cef03ca6af4e",
+    "semantic_hash": "c460350e0f8d76436ff3cef03ca6af4e"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/progress.py": {
+    "mtime": 1695296707.0,
+    "ast_hash": "ee5ac4c4a2d7e9e8f5eaee0c6f97b089",
+    "semantic_hash": "ee5ac4c4a2d7e9e8f5eaee0c6f97b089"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/save.py": {
+    "mtime": 1695293874.0,
+    "ast_hash": "7272499dc5bc39b3d215faf279dd33cf",
+    "semantic_hash": "7272499dc5bc39b3d215faf279dd33cf"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/source_terms_video_2.py": {
+    "mtime": 1732706370.5572188,
+    "ast_hash": "b649b7960768ca46879959a5c19d3779",
+    "semantic_hash": "b649b7960768ca46879959a5c19d3779"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/source_terms_video_3.py": {
+    "mtime": 1732706370.5573616,
+    "ast_hash": "93e6f79f8323c7a2c70f1e55bd231eff",
+    "semantic_hash": "93e6f79f8323c7a2c70f1e55bd231eff"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/velocity_video_2.py": {
+    "mtime": 1732706370.5574586,
+    "ast_hash": "d8efae0d35966086965fe83142f1fc9e",
+    "semantic_hash": "d8efae0d35966086965fe83142f1fc9e"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/velocity_video_3.py": {
+    "mtime": 1732706370.5575504,
+    "ast_hash": "e3b5896b1a23eb0a816829fcf259bf54",
+    "semantic_hash": "e3b5896b1a23eb0a816829fcf259bf54"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/.claude/rules/openwolf.md": {
+    "mtime": 1786366041.9604561,
+    "ast_hash": "00d56c84ff53d499c07bf40054e6d043",
+    "semantic_hash": "00d56c84ff53d499c07bf40054e6d043"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/.wolf/OPENWOLF.md": {
+    "mtime": 1786366041.946072,
+    "ast_hash": "084791202506f3acb8a2e9c953e0e67a",
+    "semantic_hash": "084791202506f3acb8a2e9c953e0e67a"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/.wolf/anatomy.md": {
+    "mtime": 1786366042.0050776,
+    "ast_hash": "1ea6349b9ac3a8858136d8cc4dc06ed4",
+    "semantic_hash": "1ea6349b9ac3a8858136d8cc4dc06ed4"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/.wolf/cerebrum.md": {
+    "mtime": 1786366041.9567404,
+    "ast_hash": "1910158ec7d2131604b200431ba5bdfe",
+    "semantic_hash": "1910158ec7d2131604b200431ba5bdfe"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/.wolf/identity.md": {
+    "mtime": 1786366041.9570363,
+    "ast_hash": "cc808178aa3d037fbeadd73949c01148",
+    "semantic_hash": "cc808178aa3d037fbeadd73949c01148"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/.wolf/memory.md": {
+    "mtime": 1786366041.9487178,
+    "ast_hash": "916165b17355f7d6b986a1b07beeac47",
+    "semantic_hash": "916165b17355f7d6b986a1b07beeac47"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/.wolf/reframe-frameworks.md": {
+    "mtime": 1786366041.9466586,
+    "ast_hash": "db639994c04fd55ac435fe278feabb49",
+    "semantic_hash": "db639994c04fd55ac435fe278feabb49"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/CLAUDE.md": {
+    "mtime": 1786366041.9607906,
+    "ast_hash": "ede6ff7d28783daceb46bc39464677c0",
+    "semantic_hash": "ede6ff7d28783daceb46bc39464677c0"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/CMakeLists.txt": {
+    "mtime": 1777538049.6103997,
+    "ast_hash": "2599e915af1801c641742d5c4405afe9",
+    "semantic_hash": "2599e915af1801c641742d5c4405afe9"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/README.md": {
+    "mtime": 1732706371.134333,
+    "ast_hash": "35a14b9615d29d593aaa2fe3e509be1d",
+    "semantic_hash": "35a14b9615d29d593aaa2fe3e509be1d"
+  },
+  "/Users/saeed/Library/Mobile Documents/com~apple~CloudDocs/GitHub/BFSimulator/requirements.txt": {
+    "mtime": 1732706370.5570846,
+    "ast_hash": "bd51ed3ad6c4cb3dec4cd0455d744b97",
+    "semantic_hash": "bd51ed3ad6c4cb3dec4cd0455d744b97"
+  }
+}

@@ -1,5 +1,5 @@
 # BFSimulator
-This project consists of two main components. The first and primary component is implemented in C++ using the deal.II libraries. It includes the computational model required to run simulations and generate results. The second component is implemented in Python3, providing a modern and user-friendly interface for adjusting model parameters and visualizing the results.
+This project consists of two main components. The first and primary component is implemented in C++ using the deal.II libraries. It includes the computational model required to run simulations and generate results. The second component is a modern desktop interface built in Python 3 with PySide6 (Qt) — an adaptive dashboard for adjusting model parameters, running the solver, and visualizing the results.
 
 ![Alt](/Images/example.png)
 
@@ -44,20 +44,15 @@ brew install cmake open-mpi gcc@11
 
 * **Python3**
 
-Use Homebrew to install Python3:
+Use Homebrew to install Python 3:
 
 ````
 brew install python@3.10
 ````
 
-Verify the installation by running ```which Python3```, which should return ```/opt/homebrew/bin/Python3```
+Verify the installation by running ```which python3```, which should return a path such as ```/opt/homebrew/bin/python3```.
 
-Next, set up the Tkinter package:
-
-````
-brew install python-tk@3.10
-````
-Finally, ensure PIP is installed for managing Python3 packages. Check with ``` pip --version```. If PIP is not installed, follow the instructions [here](https://www.groovypost.com/howto/install-pip-on-a-mac/#:~:text=To%20install%20PIP%20using%20ensurepip,instructions%20to%20complete%20this%20process.).
+The graphical interface is built with **PySide6 (Qt)**; its Python dependencies are installed from `requirements.txt` during configuration (see below) — no separate Tkinter installation is required. Ensure PIP is available for managing Python 3 packages by running ``` pip --version```. If PIP is not installed, follow the instructions [here](https://www.groovypost.com/howto/install-pip-on-a-mac/#:~:text=To%20install%20PIP%20using%20ensurepip,instructions%20to%20complete%20this%20process.).
 
 * **deal.II**
 
@@ -99,27 +94,31 @@ git clone https://github.com/SaeedZarzor/BFSimulator.git
 Enter the project folder:
  ```cd BFSimulator ```
  
-Then, install the necessary Python3 packages:
+Then install the interface's Python dependencies (mainly PySide6):
 ````
 pip install -r requirements.txt
 ````
 
-To make the Python files executable, first find the Python3 path with:
- ```which python3``` 
-Copy the path and paste it in the first line of ```BFSimulator.py ``` after ```#!```.
-Check file permissions with:
-
-```ls -lh BFSimulator.py```
-
-If the response shows ```-rwx------@ ```, the file is executable. Otherwise, make it executable with ```chmod 700 BFSimulator.py```.
-
-Repeat this step for ``` save.py```, ```make_run.py ```, and ```progress.py```
-
-
-To run the project, use:
+To run the interface, use:
 ````
-./BFSimulator.py 
+python3 BFSimulator.py
 ````
+
+Alternatively, make it executable once with ```chmod +x BFSimulator.py``` and run ```./BFSimulator.py```. The file uses a portable ```#!/usr/bin/env python3``` shebang, so there is no need to edit any path by hand.
+
+### Using the interface
+
+The interface opens as an adaptive **bento dashboard** with the six parameter categories — Geometry, Advection–Diffusion, Mechanical Properties, Discretization, Numerical Solver, and Growth — laid out as cards that reflow to the window size. Focus any field (or click its category) to see that parameter's figure, symbol, unit, recommended range, and validation in the **Parameter Guide** panel; invalid entries are highlighted with an inline message.
+
+The action bar at the bottom provides:
+
+* **Restore Defaults** — load the recommended 2D or 3D preset.
+* **Save / Load Parameters** — store the current configuration to a `.prm` file or reload one.
+* **Run Simulation** — build (if needed) and run the C++ solver. A progress window shows the solver's live terminal output and a progress bar based on the simulation time.
+
+When the run finishes, you can browse the results — the folding pattern and the cell-density, stiffness, velocity, growth-factor, and proliferation videos (rendered via ParaView) — and save them to a directory of your choice.
+
+> The Python interface is organized as a small set of modules: `BFSimulator.py` (entry point and parameter window), `bf_fields.py` (parameter registry), `bf_widgets.py` (reusable components), `bf_style.py` (theme), `bf_runner.py` (build/run workers), and `bf_results.py` (results browser).
 ## Configuration without Python3
 If you wish to run only the first part of the project, follow these steps:
 
