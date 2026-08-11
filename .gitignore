@@ -47,6 +47,6 @@ Output_*.vtk
 
 # Claude
 CLAUDE.md
-graphs/
+graphify-out/
 .wolf/
 .claude/
